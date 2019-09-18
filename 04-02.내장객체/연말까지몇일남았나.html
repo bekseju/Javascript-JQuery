@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>연말까진 몇 일 남았나?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script>
+        var endDate= new Date("2019/12/31");
+        var today= new Date();
+        var diff= endDate.getTime() - today.getTime();
+        var diffDate= Math.ceil(diff/(1000 * 60 * 60 * 24));
+        document.write("<h1>오늘부터 연말까지는 " + diffDate + "일 남았습니다. </h1>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

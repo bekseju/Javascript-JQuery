@@ -6,7 +6,23 @@
     <title>오늘의 날짜는</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script>
+        var today= new Date();
+        var dayArray= new Array("일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일");
+
+        document.write("<h1>오늘 날짜 정보</h1>", "<br>");
+        document.write("현재 월: " + (today.getMonth() + 1), "<br>");
+        document.write("현재 일: " + today.getDate(), "<br>");
+        document.write("현재 요일: " + dayArray[today.getDay()], "<br>");
+
+        var someday= new Date("2002/5/31");
+        document.write("<h1>월드컵 개최 일자</h1>", "<br>");
+        document.write("몇 월: " + (someday.getMonth() + 1), "<br>");
+        document.write("몇 일: " + someday.getDate(), "<br>");
+        document.write("몇 요일: " + dayArray[someday.getDay()], "<br>");
+
+
+    </script>
 </head>
 <body>
     
