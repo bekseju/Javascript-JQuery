@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <script>
+        var currentIndex = 1;
+        function gallery(direct) {
+            var image = document.getElementById("photo");
+
+            if (direct) {
+                if (currentIndex == 9)
+                    return;
+                currentIndex++;
+            } else {
+                if (currentIndex == 1)
+                    return;
+                currentIndex--;
+            }
+            image.setAttribute("src", "images/pic_"+currentIndex+".jpg");
+        }
+    </script>
+</head>
+
+<body>
+    <p><img src="images/pic_1.jpg" id="photo"></p>
+    <p>
+        <button onclick="gallery(0);">이전</button>
+        <button onclick="gallery(1);">다음</button>
+    </p>
+</body>
+
+</html>

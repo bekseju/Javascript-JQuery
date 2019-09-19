@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+        var fileName;
+        if (info.indexOf('windows') >= 0) {
+fileName="windows.png";
+        } else if (info.indexOf('macintosh')>=0) {
+            fileName='macintosh.png';
+        } else if (info.indexOf('iphone')>=0) {
+            fileName='iphone.png';
+        } else if (info.indexOf('android') >=0) {
+            fileName='android.png';
+        }
+
+        var res_w= screen.width;
+        var res_h= screen.height;
+
+        document.write("<img src=\"images/" + fileName + "\">", "<br>");
+        document.write("모니터 해상도 너비 x 높이 : " + res_w + " x " + res_h);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
